@@ -3,9 +3,12 @@ import React from 'react'
 const Homepage = () => {
     return(
         <div>
-            <h1>projet d'integration</h1>
+            <h1>Dazibao la louviere  🧮</h1>
+            <h2>Roman</h2><h2>jeunesse</h2><h2>Autres</h2>
+
+
             <p>
-                cette page regroupera toute les ressources du pc
+                Bienvenue sur le Dazibao de la librairire la louviere, amusez-vous !
             </p>
         </div>
     )
