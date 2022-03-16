@@ -1,4 +1,33 @@
 .App {
-  text-align: center;
+    margin: 26px 0;
+    display: flex;
+    
+
+
 }
 
+
+#categorie{
+
+    padding: 10px;
+    margin: 10px;
+    position: relative
+
+}
+
+#contact{
+
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    text-align: right;
+
+}
+
+#Login{
+
+    padding: 10px;
+    margin: 10px;
+    position: right;
+
+}

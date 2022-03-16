@@ -1,17 +1,35 @@
-import React from 'react'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { NavLink } from 'react-router-dom';
+import Navigation from './Navigation';
+
+
 
 const Homepage = () => {
     return(
-        <div>
-            <h1>Dazibao la louviere  🧮</h1>
-            <h2>Roman</h2><h2>jeunesse</h2><h2>Autres</h2>
+        <>
+            <div className='Homepage'>
+                <Navigation/>
+                
+                <h1>Dazibao la louviere  🧮</h1>
+                
 
+                <p>
+                    Bienvenue sur le Dazibao de la librairire la louviere, amusez-vous !
+                </p>
 
-            <p>
-                Bienvenue sur le Dazibao de la librairire la louviere, amusez-vous !
-            </p>
-        </div>
+               
+               
+                <form>
+                    <input type="text" placeholder='Quelle livre cherchez-vous ?'/>
+                    <button>Recherche</button>
+
+                </form>
+
+            
+            </div>
+        </>
     )
 }
 
-export default Homepage
+export default Homepage;

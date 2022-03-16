@@ -1,12 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import Navigation from './Navigation';
+
 
 const Contact = () => {
     return(
         <div>
-            <h1>projet d'integration</h1>
-            <p>
-                page de contact
-            </p>
+            <Navigation/>
+            
+            <h1>Bienvenue sur la page contact</h1>
+            
+            <form>
+                    <input type="text" placeholder='nous ecrir un message ?'/>
+                    <button>envoyer</button>
+
+                </form>
+
         </div>
     )
 }
