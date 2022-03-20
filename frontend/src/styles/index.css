@@ -1,5 +1,8 @@
-.Homepage {
-    align-content: center;
-    
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+/*toujours mettre un padding apres une nouvelle section*/
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+    background-color: #f7f7f7;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { NavLink } from 'react-router-dom';
-import Navigation from './Navigation';
+import Navigation from '../components/Navigation';
 
 
 
