@@ -11,7 +11,7 @@
   align-items: center;
   height: 75px;
   background-color: #ADD8E6;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .logo{
@@ -33,7 +33,7 @@
 .autre,
 .connexion{
   text-decoration: none;/*pour enlever le sous lignage*/
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 20px;
   padding: 10px 20px;
   margin: 0 10px;
@@ -42,7 +42,7 @@
 }
 
 .connexion{
-  border: 1px solid white;
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 12px;
 }
 
@@ -81,7 +81,7 @@
 .autre,
 .connexion
 {
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 32px;
   width: 100%;
