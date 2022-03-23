@@ -9,6 +9,7 @@ import Search from '../components/Search';
 const Homepage = () => {
     return(
         <>
+        
             <Navigation/>
             <Search/>
         </>

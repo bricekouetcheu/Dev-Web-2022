@@ -2,6 +2,7 @@ import './styles/index.css'
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { BrowserRouter, Switch } from 'react-router-dom';
+import { useState } from 'react';
 
 
 import Homepage from './pages/Homepage';
@@ -11,7 +12,10 @@ import Jeunesse from './pages/Jeunesse';
 import Autre from './pages/Autre';
 import Notfound from './pages/Notfound';
 
+
 const App = () => {
+
+
   return (
   
     <Router>
