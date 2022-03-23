@@ -12,7 +12,7 @@ const Navigation = () => {
     return(
         
          <nav className='navbar'>
-             <h3 className='logo'> Dazibao la louviere</h3>
+             <h3 className='logo'> Dazibao la louviere 📚</h3>
              <ul className={isMobile ? "nav-links-mobile" : "nav-links"}
              
              onClick = {()=>setIsMobile(false)}>
