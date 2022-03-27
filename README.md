@@ -27,3 +27,24 @@ cloner le repo
 ```
 git clone https://github.com/bricekouetcheu/Dev-Web-2022.git
 ```
+
+Pour installer le projet
+```
+npm install
+cd frontend
+// dans le frontend
+npm install
+npm run build 
+
+cd backend
+// dans le backend
+npm install
+npm i nodemon
+```
+
+Pour lancer le projet
+```
+cd frontend
+npm start
+"Dazibao littérairer" tourne sur le port localhost:3000"
+```
