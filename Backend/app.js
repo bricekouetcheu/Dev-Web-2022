@@ -1,13 +1,8 @@
 const express = require("express");
-const mongoose = require("mongoose");
-
+const pool = require("./db.js")
+const UserRoutes = require("./routes/user.js");
 const app = express();
 
-mongoose.connect('mongodb+srv://brice_ronald:ProjetDev2022@cluster3.gyc8x.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-  { useNewUrlParser: true,
-    useUnifiedTopology: true })
-  .then(() => console.log('Connexion à MongoDB réussie !'))
-  .catch(() => console.log('Connexion à MongoDB échouée !'));
 
   app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -22,6 +17,8 @@ app.use(express.json());
 app.get('/', function (req, res) {
     res.send('mise en place du serveur de developpement')
 })
+
+app.use('/api/users' , UserRoutes);
 
 
 module.exports = app;
