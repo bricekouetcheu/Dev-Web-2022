@@ -20,7 +20,7 @@ const Navigation = () => {
                  <NavLink to='/Jeunesse' className='jeunesse'> <li>Jeunesse</li></NavLink>
                  <NavLink to='/Roman' className='roman'> <li>Roman</li></NavLink>
                  <NavLink to='/Autre' className='autre'> <li>Autre</li></NavLink>
-                 <NavLink to='/login' className='connexion'><li>Connexion</li></NavLink>
+                 <NavLink to='/Login' className='connexion'><li>Connexion</li></NavLink>
 
              </ul>
 

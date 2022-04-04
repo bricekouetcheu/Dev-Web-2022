@@ -6,11 +6,11 @@ import { useState } from 'react';
 
 
 import Homepage from './pages/Homepage';
-import Contact from './pages/Contact';
 import Roman from './pages/Roman';
 import Jeunesse from './pages/Jeunesse';
 import Autre from './pages/Autre';
 import Notfound from './pages/Notfound';
+import Login from './pages/Login';
 
 
 const App = () => {
@@ -22,10 +22,10 @@ const App = () => {
       <div className="App">
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/Contact" element={<Contact />} />
           <Route path="/Roman" element={<Roman />} />
           <Route path="/Jeunesse" element={<Jeunesse />} />
           <Route path="/Autre" element={<Autre />} />
+          <Route path="/Login" element={<Login/>} />
           <Route path="/Notfound" element={<Notfound />} />
         </Routes>
       </div>

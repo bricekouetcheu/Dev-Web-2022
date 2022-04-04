@@ -1,17 +1,21 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Navigation from './Navigation';
+import Navigation from '../components/Navigation';
+import Register from '../components/Register';
+
+
 
 
 const Login = () => {
     return(
+
+
         <div>
-            <Navigation/>
+             <Navigation/>
+             <Register/>
             
-            <h1>Login</h1>
-            <p>
-                
-            </p>
+            
+            
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom'
-import '../styles/components/navigation.css'
+import '../styles/components/search.css'
 import axios from 'axios';
 
 
@@ -31,19 +31,23 @@ const Search = () => {
 
     return (
         <div class="container">
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <input
-                    className='barRechercheLivre'
-                    type="text" 
-                    autoComplete='off' 
-                    placeholder='Quelle livre cherchez-vous ?'
-                    id="livre"
-                    onChange={handleChange}
-                    />
-                </div>
-                    <button type="submit">Recherche</button>
-                </form>
+            <div className='searchBar'>
+                <form  className='form_books' onSubmit={handleSubmit}>
+                    <div>
+                        <input
+                            className='search'
+                             type="text" 
+                             autoComplete='off' 
+                            placeholder='Quelle livre cherchez-vous ?'
+                            id="livre"
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <button className='submitBtn' type="submit">Recherche</button>
+                 </form>
+
+            </div>
+           
                 {result.map(book => (
                     <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.title}/>
                 ))}

@@ -1,0 +1,54 @@
+div.container{
+    background-color: #f5f5f5f5;
+    align-items: center;
+    top: 200px;
+    width: auto;
+}
+
+.form_books{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #f5f5f5f5;
+
+
+}
+
+.searchBar{
+    display: flex;
+    align-self: center;
+    align-items: center;
+
+       
+}
+
+.search{
+    padding: 25px;
+    width: 500px;
+    height: 20px;
+    border-radius: 20px;
+    
+}
+
+.search:hover{
+    box-shadow: 0 0 10px rgba(black , 0.5);
+}
+
+.submitBtn{
+    padding: 10px;
+    margin-left: 5px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    align-items: center;
+    margin: 10px 0px 40px;
+    
+  }
+
+  .submitBtn:hover{
+    box-shadow: 0 0 10px rgba(grey,1);
+  }
