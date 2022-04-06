@@ -1,15 +1,23 @@
 import React, {useState} from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink ,useNavigate} from 'react-router-dom'
 import '../styles/components/search.css'
 import axios from 'axios';
 
 
-const Search = () => {
+
+
+const Search = (props) => {
 
     
     const [book, setBook] = useState("");
     const [result, setResult] = useState([]);
     const [ApiKey, setApiKey] = useState("AIzaSyD-ApOEYhezmTwgoeQVV5BA7Ow542q_zhM");
+    const navigate = useNavigate();
+
+    const movetoHome=()=>{
+        navigate('/Login');
+
+    }
 
     function handleChange(event){
         const book = event.target.value;
@@ -30,7 +38,7 @@ const Search = () => {
     }
 
     return (
-        <div class="container">
+        <div className='container'>
             <div className='searchBar'>
                 <form  className='form_books' onSubmit={handleSubmit}>
                     <div>
@@ -47,9 +55,14 @@ const Search = () => {
                  </form>
 
             </div>
+                       {/*console.log(.id)*/};
            
-                {result.map(book => (
-                    <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.title}/>
+                {result.map((book,index)=> (
+                    <div>
+                        {console.log(index)}
+                            <img key={index} src={book.volumeInfo.imageLinks.thumbnail} alt={book.title} onClick={()=>{movetoHome()}}/>
+                    </div>
+                    
                 ))}
         </div>
     );

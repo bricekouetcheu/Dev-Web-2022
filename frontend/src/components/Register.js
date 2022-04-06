@@ -1,87 +1,120 @@
 import React, { useState } from 'react';
 import '../styles/components/Register.css'
+import axios from 'axios';
+import validator from 'validator';
+
 
 const Register = () => {
-
     const [name , setName] = useState('');
     const [surname , setSurname] = useState('');
     const [email , setEmail] = useState('');
     const [password , setPassword] = useState('');
     const [confPassword , setconfPassword] = useState('');
+    const API_URL = 'http://localhost:5000/api/users/register';
+
+   
 
     const handleNameChange = (e)=>{
         setName(e.target.value);
-    }
+    };
 
     const handleSurnameChange = (e)=>{
         setSurname(e.target.value);
-    }
+    };
 
     const handleEmailChange = (e)=>{
-        setEmail(e.target.value);
-    }
+       setEmail(e.target.value);
+      
+    };
 
     const handlePasswordChange = (e)=>{
-        setPassword(e.target.value)
-    }
+        setPassword(e.target.value);
+    };
 
     const handleConfPasswordChange = (e)=>{
-        setconfPassword(e.target.value)
-    }
+        setconfPassword(e.target.value);
+    };
 
 
     const handleSubmit = (e)=>{
-        if(password!== confPassword){
+
+        if (validator.isEmail(email)!== true) {
+            alert("attention à votre email");
+          } 
+        if(password!== confPassword ){
             alert('les mots de passe ne correspondent pas');
 
         }else{
-            alert('nouvel utilisateur crée');
+            axios.post(API_URL, {
+                name: name,
+                surname: surname,
+                email: email,
+                password:password
+              })
+              .then(function (response) {
+                console.log(response);
+              })
+              .catch(function (error) {
+                console.log(error);
+              });
+            
         }
+
+        
 
         e.preventDefault();
 
-    }
+    };
+
+
 
     return (
         <div className='register'>
-            <form className='form-register'>
-                    <h2>INSCRIPTION</h2>
-                    <div className='user-icon'>
-                    <i class="fa-solid fa-user fa-4x"></i>< br />< br />
-                    </div>
+        <form className='form-register' onSubmit={handleSubmit}>
+                <h2>INSCRIPTION</h2>
+                <div className='user-icon'>
+                <i class="fa-solid fa-user fa-4x"></i>< br />< br />
+                </div>
 
-                    <div className='inputs'>
-                        <input className='name' type='text' value={name} placeholder='nom' />
+                <div className='inputs'>
+                    <input className='name' type='text' value={name}  onChange={handleNameChange} placeholder='nom' />
 
-                  
-                         <input className='name' value={surname} type='text' placeholder='prenom'/>
-
-
-                        <input className='name' value={email} type='email' placeholder='email'/>
+              
+                     <input className='name' value={surname} type='text' onChange={handleSurnameChange}placeholder='prenom'/>
 
 
-                        <input className='name' value={password} type='password' placeholder='mot de passe'/>
+                    <input className='name' value={email} type='email' onChange={handleEmailChange} placeholder='email'/>
 
 
-                        <input className='name' value={confPassword} type='password' placeholder='confirmer mot de passe'/>
+                    <input className='name' value={password} type='password'onChange={handlePasswordChange} placeholder='mot de passe'/>
 
 
-                       
-                    </div>
-                    <div align='center'>
-                    <p className='inscription'>vous avez deja un compte?</p>
-                    <input className='submit-btn' value='submit' type='submit'/>< br />
+                    <input className='name' value={confPassword} type='password' onChange={handleConfPasswordChange} placeholder='confirmer mot de passe'/>
+
+
                    
-                    </div>
-
-                    
-
+                </div>
+                <div align='center'>
+                <p className='inscription'>vous avez deja un compte?</p>
+                <input className='submit-btn' value='submit' type='submit'/>< br />
                
+                </div>
+
+                
+
+           
 
 
-            </form>
-            
-        </div>
+        </form>
+        
+    </div>
+
+
+
+
+
+
+
     );
 };
 
