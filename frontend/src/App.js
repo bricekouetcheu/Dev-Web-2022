@@ -11,6 +11,7 @@ import Jeunesse from './pages/Jeunesse';
 import Autre from './pages/Autre';
 import Notfound from './pages/Notfound';
 import Login from './pages/Login';
+import Test from './pages/Test';
 
 
 const App = () => {
@@ -25,7 +26,7 @@ const App = () => {
           <Route path="/Roman" element={<Roman />} />
           <Route path="/Jeunesse" element={<Jeunesse />} />
           <Route path="/Autre" element={<Autre />} />
-          <Route path="/Login" element={<Login/>} />
+          <Route path="/Test" element={<Test/>} />
           <Route path="/Notfound" element={<Notfound />} />
         </Routes>
       </div>
