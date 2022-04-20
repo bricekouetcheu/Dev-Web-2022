@@ -4,6 +4,7 @@ import '../styles/components/Register.css'
 import { useState } from 'react';
 import axios from 'axios';
 import { Validator } from 'react';
+import validator from 'validator';
 
 function Register(props) {
 

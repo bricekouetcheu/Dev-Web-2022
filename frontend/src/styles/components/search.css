@@ -52,3 +52,10 @@ div.container{
   .submitBtn:hover{
     box-shadow: 0 0 10px rgba(grey,1);
   }
+
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }

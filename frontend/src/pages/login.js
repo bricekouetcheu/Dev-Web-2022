@@ -4,6 +4,7 @@ import Navigation from '../components/Navigation';
 import '../styles/components/login.css';
 import axios from 'axios';
 import { Validator } from 'react';
+import validator from 'validator';
 
 
 

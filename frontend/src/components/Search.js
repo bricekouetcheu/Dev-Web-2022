@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { NavLink ,useNavigate} from 'react-router-dom'
 import '../styles/components/search.css'
 import axios from 'axios';
+import Cards from './Cards';
 
 
 
@@ -29,7 +30,7 @@ const Search = (props) => {
         event.preventDefault();
 
 
-        axios.get("https://www.googleapis.com/books/v1/volumes?q=" + book + "&key=" + ApiKey+ "&maxResults=40")
+        axios.get('http://localhost:5000/api/books/'+book)
         .then(data => {
             setResult(data.data.items);
             console.log(data.data.items);
@@ -55,15 +56,27 @@ const Search = (props) => {
                  </form>
 
             </div>
-                       {/*console.log(.id)*/};
-           
-                {result.map((book,index)=> (
-                    <div>
-                        {console.log(index)}
-                            <img key={index} src={book.volumeInfo.imageLinks.thumbnail} alt={book.title} onClick={()=>{movetoHome()}}/>
-                    </div>
+
+            <div className='display-data'>
+                <ul>
+                    {result.map((data , index)=>(
+                        <Cards
+                         key={index} 
+                         img={data.volumeInfo.imageLinks.smallThumbnail}
+                         title={data.volumeInfo.title}
+                         description={data.volumeInfo.description}/>
+                    )
+
+                    )}
+                </ul>
+            </div>
+                       
+             
+                
+               
+                      
                     
-                ))}
+                
         </div>
     );
 };
