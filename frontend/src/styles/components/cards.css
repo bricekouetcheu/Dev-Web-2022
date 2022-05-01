@@ -4,25 +4,66 @@
     background-color: white;
     border-radius: 10px;
     padding: 20px;
-    margin-top: 15px;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
     
     
 }
-
+.image-section{
+   padding: 10px;
+    margin: 0;
+    padding-bottom: 20px;
+}
 img{
     
     object-fit: cover;
-    height: 214px;
+    height: 190px;
 }
 
-.infos{
+.infos-section{
     font-size: 15px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0;
+
   
 }
+.infos-section h5{
+    text-align: center;
+}
 
-button{
+.infos-section button{
     margin: 0 auto;
     display: block;
+    background-color: #ADD8E6;
+    text-decoration:none; 
+    padding: 7px;
+    border-radius: 5px;
+    
+    
+}
+
+.infos-section button:hover{
+    color: black;
+    text-decoration: none;
+    transform: scaleX(1.2);
+
+}
+
+.infos-section a{
+    color: black;
+    text-decoration: none;
+}
+
+.infos-section a:hover{
+    color: black;
+    text-decoration: none;
+    transform: scaleX(1.2);
+
 }
 
 

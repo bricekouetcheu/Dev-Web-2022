@@ -5,6 +5,7 @@ const app = express();
 var bodyParser = require('body-parser');
 const BookRoutes = require("./routes/book.js");
 const cors = require('cors');
+const CommentsRoutes = require('./routes/comment.js')
 
 
 app.use(express.json()); //pour gerer les requetes POST
@@ -33,6 +34,7 @@ app.use((req,res,next)=>{// POUR CONTOUNER LA SECURITE CORS
 
 app.use('/api/books' , BookRoutes);
 app.use('/api/users' , UserRoutes);
+app.use('/api/books' , CommentsRoutes);
 
 
 

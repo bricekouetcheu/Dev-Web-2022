@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Register from './Register';
 import Search from '../components/Search';
+import '../styles/pages/homepage.css';
 
 
 

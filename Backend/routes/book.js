@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const {getOneBooksbyName} = require('../controllers/books');
+const {getBooksbyName} = require('../controllers/books');
 const cors = require('../middlewares/EnableCors');
+const {getOneSingleBook} = require('../controllers/books');
 
-router.get('/:title', cors , getOneBooksbyName);
+router.get('/:title', cors , getBooksbyName);
+router.get('/single/:id', getOneSingleBook);
 
 module.exports = router;

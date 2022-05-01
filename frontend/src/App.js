@@ -12,6 +12,7 @@ import Autre from './pages/Autre';
 import Notfound from './pages/Notfound';
 import Login from './pages/Login';
 import Test from './pages/Test';
+import Books from './pages/Books';
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/Autre" element={<Autre />} />
           <Route path="/Test" element={<Test/>} />
           <Route path="/Notfound" element={<Notfound />} />
+          <Route path="/Books/:bookId" element={<Books/>} />
         </Routes>
       </div>
     </Router>

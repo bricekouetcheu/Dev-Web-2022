@@ -31,9 +31,9 @@ const Search = (props) => {
 
 
         axios.get('http://localhost:5000/api/books/'+book)
-        .then(data => {
-            setResult(data.data.items);
-            console.log(data.data.items);
+        .then(data1 => {
+            setResult(data1.data.items);
+            console.log(result);
 
         })
     }
@@ -56,12 +56,14 @@ const Search = (props) => {
                  </form>
 
             </div>
+            
 
             <div className='display-data'>
                 <ul>
                     {result.map((data , index)=>(
                         <Cards
-                         key={index} 
+                         key={index}
+                         id={data.id} 
                          img={data.volumeInfo.imageLinks.smallThumbnail}
                          title={data.volumeInfo.title}
                          description={data.volumeInfo.description}/>
