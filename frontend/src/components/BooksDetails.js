@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import '../styles/components/bookDetails.css';
 
 function BooksDetails(props) {
@@ -11,10 +11,21 @@ function BooksDetails(props) {
     const auteurs = props.authors;
     const date_de_publication = props.publishedDate;
 
+    const book_id = props.book_id;
+
+    const Commentaires = props.Commentaires;
+    const publishedDate = props.publishedDate;
+    const name = props.name;
+    const surname = props.surname;
+
+    console.log("boook id" + book_id)
+
+
 
     
     
     return (
+        <>
         <div className='book-details'>
              <div className='image-section'>
                  <img src={props.imageLinks} alt={props.title}/> <br/> <br/>
@@ -26,9 +37,20 @@ function BooksDetails(props) {
                 <p><h3>AUTEURS :</h3> {props.auteurs}</p>
                 <p><h3>DATE DE PUBLICATION : </h3>{props.publishedDate}</p>
             </div>
-           
-            
         </div>
+
+        <div className='infos-sections'>
+            <h1>Commentaires</h1>
+            <div className='infos-sections'>
+                <h2>{name} {surname}</h2>
+                <p>Date : {publishedDate}</p>
+                <p>{Commentaires}</p>
+            </div>
+
+        </div>
+        
+
+        </>
     );
 }
 

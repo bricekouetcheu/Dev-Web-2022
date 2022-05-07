@@ -44,3 +44,12 @@ app.get('/', function (req, res) {
 
 
 module.exports = app;
+
+
+app.get('/api/comment/:id', (req,res) => {
+  const id_comment = req.params.id
+  const comment = description.find(comment.comment,
+  res.send({comment})
+    )
+
+})
