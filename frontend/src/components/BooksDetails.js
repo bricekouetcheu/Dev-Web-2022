@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import '../styles/components/bookDetails.css';
+import CommentSection from './CommentSection';
 
 function BooksDetails(props) {
     //declaration des proprietés
@@ -10,12 +11,14 @@ function BooksDetails(props) {
     const description = props.description;
     const auteurs = props.authors;
     const date_de_publication = props.publishedDate;
+   
 
 
     
     
     return (
-        <div className='book-details'>
+       <div>
+                 <div className='book-details'>
              <div className='image-section'>
                  <img src={props.imageLinks} alt={props.title}/> <br/> <br/>
 
@@ -26,9 +29,13 @@ function BooksDetails(props) {
                 <p><h3>AUTEURS :</h3> {props.auteurs}</p>
                 <p><h3>DATE DE PUBLICATION : </h3>{props.publishedDate}</p>
             </div>
-           
-            
+  
         </div>
+        <CommentSection/>
+       </div>
+       
+
+       
     );
 }
 

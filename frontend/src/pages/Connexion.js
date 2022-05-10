@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import Register from './Register';
-import Login from './Login';
+import Register from '../components/Register';
+import Login from '../components/Login';
 
-function Test(props) {
+function Connexion(props) {
 
 
     const [login , setlogin]= useState(false);
 
     const toggle = ( )=>{
+
         setlogin(!login);
     }
 
@@ -20,4 +21,4 @@ function Test(props) {
     );
 }
 
-export default Test;
+export default Connexion;

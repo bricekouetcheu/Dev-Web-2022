@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { NavLink } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Register from './Register';
+
 import Search from '../components/Search';
 import '../styles/pages/homepage.css';
 
 
 
 const Homepage = () => {
+    console.log(localStorage.getItem("SessionToken"));
     return(
         <>
         <div className='homepage'>

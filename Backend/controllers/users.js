@@ -82,6 +82,9 @@ exports.Login = (req , res , next)=>{
          pool.query(`SELECT * FROM users WHERE email= $1;`, [email])
          .then( result=>{
             const user = result.rows;
+            const name = user[0].name;
+            const surname = user[0].surname;
+            const user_id= user[0].user_id
             if(user.length === 0){//check si le user n'existe pas encore dans la bd
                 return res.status(500).json({message: 'not registered yet'});
             }
@@ -90,17 +93,18 @@ exports.Login = (req , res , next)=>{
                 bcrypt.compare(password , user[0].password) // on compare le mot de passe recu du frontend et le mot de passe connu dans la bd
                 .then(valid =>{
                     if(!valid){ // si pas le correspondance
-                        return res.status(400).json({message:'mot de passe incorrect'})
+                        return res.status(401).send({message:'mot de passe incorrect'})
                     }else{ // s'il y'a correspondance
-                        return res.status(200).json({
-                            message:'user logged in',
-                            token:jwt.sign(//on cree un token de connexion au user
-                               
-                                { email: email },
-                                'RANDOM_TOKEN_SECRET',
-                                { expiresIn: '24h' }
-                            )
-                        });
+
+                        const token = jwt.sign({
+                            email: email,
+                            name : name,
+                            id : user_id,
+                            surname: surname}, 
+                            'RANDOM_TOKEN_SECRET',
+                            { expiresIn: '48h'})
+
+                        return res.status(200).json(token)
                     }
                 })
     
@@ -126,4 +130,9 @@ exports.Login = (req , res , next)=>{
         });
 }
 
+}
+
+//pour prevenir les cas de fake token envoyés par le frontend
+exports.CheckUserAuthentication = (req , res)=>{
+    res.json(req.user)
 }

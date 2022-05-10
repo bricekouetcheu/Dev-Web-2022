@@ -1,5 +1,5 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
+import Navigation from './Navigation';
 import '../styles/components/Register.css'
 import { useState } from 'react';
 import axios from 'axios';
@@ -79,7 +79,7 @@ function Register(props) {
         <form className='form-register' onSubmit={handleSubmit}>
                 <h2>INSCRIPTION</h2>
                 <div className='user-icon'>
-                <i class="fa-solid fa-user fa-4x"></i>< br />< br />
+                <i className="fa-solid fa-user fa-4x"></i>< br />< br />
                 </div>
 
                 <div className='inputs'>
@@ -101,7 +101,7 @@ function Register(props) {
                    
                 </div>
                 <div align='center'>
-                <p className='inscription' onClick={props.Switch}>vous avez deja un compte?</p>
+                <a> <p className='inscription' onClick={props.Switch}>vous avez deja un compte?</p></a>
                 <input className='submit-btn' value='submit' type='submit'/>< br />
                
                 </div>

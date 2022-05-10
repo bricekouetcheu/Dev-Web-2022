@@ -5,12 +5,13 @@
 
 }
 
-form{
+.form-login{
     margin-top: 20px;
     background-color: white;
     padding: 40px 60px;
     border-radius: 10px;
     min-width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 form h2{
@@ -37,7 +38,7 @@ form .inputs input{
 }
 
 
-form p.inscription{
+form h5.inscription{
     font-size: 14px;
     margin-bottom: 20px;
 }
@@ -52,4 +53,14 @@ form p.inscription{
     outline: none;
     cursor: pointer;
 
+}
+
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: pointer;
+    text-decoration: none;
 }
