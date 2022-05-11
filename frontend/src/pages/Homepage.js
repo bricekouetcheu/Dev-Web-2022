@@ -9,7 +9,7 @@ import '../styles/pages/homepage.css';
 
 
 const Homepage = () => {
-    console.log(localStorage.getItem("SessionToken"));
+    console.log(localStorage.getItem("accessToken"));
     return(
         <>
         <div className='homepage'>

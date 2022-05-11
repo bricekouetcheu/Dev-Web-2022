@@ -6,7 +6,8 @@ function DisplayComment(props) {
         <li>
         <div className='comment-section'>
             <i class="fa-solid fa-circle-user fa-2px" ></i>
-            <h3>{props.authors}</h3>
+            <p>bonjour</p>
+            <h3>{props.name}</h3>
             <h4>{props.date}</h4>
             <p>{props.description}</p>
 

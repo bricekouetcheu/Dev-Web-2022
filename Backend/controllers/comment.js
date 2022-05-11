@@ -7,8 +7,9 @@ const axios = require('axios');
 exports.getCommentsFromOneBook = (req , res, next)=>{
    
    
-    const getcomments = 'SELECT  description, authors, publisheddate FROM  comments  WHERE book_id= $1 ';
+    const getcomments = 'SELECT  C.description, C.publisheddate , U.name FROM  comments as C NATURAL JOIN users as U WHERE C.book_id= $1 ';
     const  bookID = req.params.id;
+    
 
     try {
         pool.query(getcomments , [bookID] , (err , results)=>
@@ -35,14 +36,15 @@ exports.getCommentsFromOneBook = (req , res, next)=>{
 
 exports.addNewComment = (req , res , next) => {
 
-    const addComments = 'INSERT INTO comments(description , publisheddate , book_id , authors ) values ($1 , CURRENT_TIMESTAMP, $2, $3)'
+    const addComments = 'INSERT INTO comments(description , publisheddate , book_id , user_id ) values ($1 , CURRENT_TIMESTAMP, $2, $3)'
     const  id = req.params.id;
-    const authors = req.user.id;
+    const userId = req.user.id;
     const description = req.body.description;
+    authors = req.user.name;
     
 
     try{
-        pool.query(addComments , [description , id  , authors] , (err , result)=>{
+        pool.query(addComments , [description , id  , userId] , (err , result)=>{
             if(err){
                 throw err
             }

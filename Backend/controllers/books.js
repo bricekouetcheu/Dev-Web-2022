@@ -1,4 +1,4 @@
-const pool = require("../db");
+/*const pool = require("../db");*/
 const fetch = require('node-fetch');
 const axios = require('axios');
 

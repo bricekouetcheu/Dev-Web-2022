@@ -26,8 +26,8 @@ function BooksDetails(props) {
             <div className='infos-sections'>
                 <h2>TITRE : {props.title}</h2>
                 <h6>DESCRIPTION : {props.description} </h6>
-                <p><h3>AUTEURS :</h3> {props.auteurs}</p>
-                <p><h3>DATE DE PUBLICATION : </h3>{props.publishedDate}</p>
+                <h3>AUTEURS :{props.auteurs}</h3> 
+                <h3>DATE DE PUBLICATION : {props.publishedDate}</h3>
             </div>
   
         </div>
