@@ -78,7 +78,7 @@ function CommentSection(props) {
               <div>
                     <i className="fa-solid fa-circle-user fa-2px" ></i>
                     <h3>{comment.name}</h3>
-                    <h4>{comment.date}</h4>
+                    <h4>{comment.publisheddate}</h4>
                     <p>{comment.description}</p>
                </div>
             
