@@ -13,7 +13,7 @@ const Cards = (props) => {
 
         <li className='cards'>
         <div className='image-section'>
-             <img src={props.img} alt={title}/>
+             <img src={props.img} alt={title} />
         </div>
   
       <div className='infos-section'>

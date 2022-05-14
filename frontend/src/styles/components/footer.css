@@ -1,0 +1,30 @@
+
+.footer-section{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 20px;
+	background-color: #18212b;
+	color: #fff;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 150px;
+}
+
+.footer-section .social-media{
+	display: flex;
+	
+}
+
+.footer-section .social-media p {
+
+	border-radius: 50%;
+	border: 1px solid #fff;
+	width: 25px;
+	padding: 2px;
+	cursor: pointer;
+	text-align: center;
+	margin-right: 15px;
+}

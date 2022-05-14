@@ -72,7 +72,7 @@ const Login = ({Switch} ) => {
                         <input className='name' value={password} type='password'onChange={handlePasswordChange} placeholder='mot de passe'/>
                   
                     </div>
-
+                    
 
                     <div align='center'>
                       
