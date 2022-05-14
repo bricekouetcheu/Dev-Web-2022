@@ -76,6 +76,7 @@ function CommentSection(props) {
           {comments.map((comment, key) => {
             return (
               <div>
+                
                     <i className="fa-solid fa-circle-user fa-2px" ></i>
                     <h3>{comment.name}</h3>
                     <h4>{comment.publisheddate}</h4>
