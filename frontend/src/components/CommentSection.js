@@ -2,6 +2,7 @@ import React, { useState , useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import DisplayComment from './DisplayComment';
+import '../styles/components/CommentSection.css';
 
 function CommentSection(props) {
     const [comments , setComments] = useState([]);
@@ -65,21 +66,25 @@ function CommentSection(props) {
     return (
 
         <div className='comments-section'>
-          <div className='comment_form'>
+          <div className='comments_form'>
               
-                <textarea className = '' value={newcomment}  htmlfor= 'comment' onChange={handleChangeComment}></textarea>
-                <button onClick={addComment}>Ajouter votre comentaire </button>
+                <textarea className = '' value={newcomment}  htmlfor= 'comment' onChange={handleChangeComment} placeholder="Donnez votre avis..."></textarea>
+                <button onClick={addComment}><b>Ajouter votre comentaire</b> </button>
            </div>
 
-         <div className='Comment_display'>
+         <div className='Comments_display'>
          
           {comments.map((comment, key) => {
             return (
-              <div className=' comment'>
+              <div className='comment-name'>
                   <div className='comment-head'>
-                    <i className="fa-solid fa-circle-user fa-2px" ></i>
-                    <h3>{comment.name}</h3>
-                    <h4>{comment.publisheddate}</h4>
+                        <i className="fa-solid fa-circle-user fa-2x" ></i>
+                        <div className=''>
+                            <h3>{comment.name} </h3>
+                            <h6>{comment.publisheddate}</h6>
+                          
+                        </div>
+                        
                   </div>
                     
                     <p>{comment.description}</p>
