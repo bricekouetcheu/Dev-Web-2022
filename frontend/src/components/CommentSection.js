@@ -1,10 +1,13 @@
-import React, { useState , useEffect } from 'react';
+import React, { useState , useEffect,useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import DisplayComment from './DisplayComment';
 import '../styles/components/CommentSection.css';
+import {AuthContext} from '../contexts/AuthContext';
 
 function CommentSection(props) {
+
+    const { isAuthenticated, setIsAuthenticated }  = useContext(AuthContext);
     const [comments , setComments] = useState([]);
     const [name,setName] = useState('');
     const [newcomment,setNewcomment] = useState('');
