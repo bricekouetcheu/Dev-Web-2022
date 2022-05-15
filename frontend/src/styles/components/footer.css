@@ -6,11 +6,13 @@
 	padding: 20px;
 	background-color: #18212b;
 	color: #fff;
-    position: relative;
-    bottom: 0;
-    left: 0;
+    
+   /* bottom: 0px;
+    left: 0;*/
     width: 100%;
     margin-top: 150px;
+	height: 150px;
+	
 }
 
 .footer-section .social-media{
@@ -20,8 +22,8 @@
 
 .footer-section .social-media p {
 
-	border-radius: 50%;
-	border: 1px solid #fff;
+	/*border-radius: 50%;*/
+	/*border: 1px solid #fff;*/
 	width: 25px;
 	padding: 2px;
 	cursor: pointer;

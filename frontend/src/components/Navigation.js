@@ -26,11 +26,11 @@ const Navigation = () => {
      return(
         
          <nav className='navbar'>
-             <h3 className='logo'> Dazibao la louviere 📚</h3>
+             <h3 className='logo'><strong> Dazibao la louvière</strong> 📚</h3>
              <ul className={isMobile ? "nav-links-mobile" : "nav-links"}
              
              onClick = {()=>setIsMobile(false)}>
-                 <NavLink to='/' className='home'> <li>Acceuil</li></NavLink>
+                 <NavLink to='/' className='home'> <li>Accueil</li></NavLink>
                  <NavLink to='/Jeunesse' className='jeunesse'> <li>Jeunesse</li></NavLink>
                  <NavLink to='/Roman' className='roman'> <li>Roman</li></NavLink>
                  <NavLink to='/Autre' className='autre'> <li>Autre</li></NavLink>

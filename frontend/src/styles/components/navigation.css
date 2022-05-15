@@ -10,8 +10,9 @@
   justify-content: space-around;
   align-items: center;
   height: 90px;
-  background-color: #ADD8E6;
+  background-color: #8ec3eb;
   color: rgb(0, 0, 0);
+  width: 100%;
 }
 
 .logo{

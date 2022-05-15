@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import BooksDetails from '../components/BooksDetails';
+import Footer from '../components/Footer';
 
 const Books = (props) => {
 
@@ -62,6 +63,7 @@ const Books = (props) => {
             description = {result.description}
             auteurs = {result.authors}
             publishedDate = {result.publishedDate}/>
+            <Footer/>
             
              
            

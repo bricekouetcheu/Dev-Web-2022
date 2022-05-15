@@ -59,7 +59,7 @@ const Search = (props) => {
             
 
             <div className='display-data'>
-                <ul>
+                <ul className='cards_ul'>
                     {result.map((data , index)=>(
                         <Cards
                          key={index}

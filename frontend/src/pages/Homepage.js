@@ -17,9 +17,6 @@ const Homepage = () => {
             <Navigation/>
             <div className='body-section'>
                 <Search />
-                <div>
-
-                </div>
                 <Footer/>
             </div>
             

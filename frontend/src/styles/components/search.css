@@ -55,8 +55,41 @@ div.container{
   }
 
 
-  ul {
+  .cards_ul{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  .display-data{
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .search{
+        padding: 15px;
+        width: 200px;
+        height: 20px;
+        border-radius: 20px;
+        
+    }
+    .submitBtn{
+        padding: 5px;
+        margin-left: 5px;
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+        align-items: center;
+        margin: 10px 0px 40px;
+        
+      }
+    
+      .submitBtn:hover{
+        box-shadow: 0 0 10px rgba(grey,1);
+      }
   }

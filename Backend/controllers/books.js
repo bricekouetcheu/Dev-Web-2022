@@ -11,7 +11,7 @@ exports.getBooksbyName = (req, res, next) => {
     
 
 
-    fetch("https://www.googleapis.com/books/v1/volumes?q=" + title + "&key=" + APIKey+ "&maxResults=5")
+    fetch("https://www.googleapis.com/books/v1/volumes?q=" + title + "&key=" + APIKey+ "&maxResults=10")
     .then((response) => { 
         const status = res.status; 
         return response.json() 
@@ -19,7 +19,7 @@ exports.getBooksbyName = (req, res, next) => {
       .then((jsonResponse) => {
           res.status(200);
           res.send(jsonResponse);
-        console.log(jsonResponse);
+       /* console.log(jsonResponse);*/
         
       })
     .catch(err =>{

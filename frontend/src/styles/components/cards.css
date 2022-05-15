@@ -1,55 +1,84 @@
-.cards{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin: 0 auto;
-    list-style-type: none;
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 10px;
-    text-align: center;
+.cards-items{
     display: flex;
-    flex-direction: column;
-    width: 18%;
+    padding: 1rem;
+    @media(min-width: 40rem) {
+      width: 50%;
+    }
+    @media(min-width: 56rem) {
+      width: 33.3333%;
+    }
     
     
 }
+.cards-content{
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    width: 250px;
+    height: 400px;
 
-.cards:hover{
+}
+
+
+.image-section{
+    padding: 10px;
+    margin: 0;
+    padding-bottom: 20px;
+ }
+ img{
+   
+     object-fit: cover;
+     height: 190px;
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ }
+ 
+.cards-text{
+/*display: flex;
+flex-direction: column;*/
+ /* flex: 1 1 auto;*/
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  padding: 1px;
+  height: 50px;
+}
+
+
+
+
+.cards-items:hover{
     transform: scaleX(0.9);
 }
 
-.image-section{
-   padding: 10px;
-    margin: 0;
-    padding-bottom: 20px;
-}
-img{
-    
-    object-fit: cover;
-    height: 190px;
-}
 
 .infos-section{
-    font-size: 15px;
-    background-color: white;
     display: flex;
-    flex-wrap: wrap;
+    flex: 1 1 auto;
     flex-direction: column;
-    margin: 0;
-
+    padding: 1rem;
+    margin-bottom: 20px;
   
 }
 .infos-section h5{
     text-align: center;
+    margin-top: 1px;
 }
 
 .infos-section button{
     margin: 0 auto;
     display: block;
-    background-color: black;
     text-decoration:none; 
-    padding: 7px;
+    padding: 8px;
+    border: 1px solid black;
     border-radius: 5px;
+    width: 75px;
+    background-color:rgba(181, 166, 174, 0.8);
     
     
 }
@@ -62,14 +91,15 @@ img{
 }
 
 .infos-section a{
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
 .infos-section a:hover{
-    color: white;
+    color: black;
     text-decoration: none;
     transform: scaleX(1.2);
+   
 
 }
 

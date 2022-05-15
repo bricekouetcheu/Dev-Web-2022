@@ -11,18 +11,19 @@ const Cards = (props) => {
     return (
         
 
-        <li className='cards'>
-        <div className='image-section'>
-             <img src={props.img} alt={title} />
-        </div>
+        <li className='cards-items'>
+            <div className='cards-content'>
+                <div className='image-section'>
+                    <img src={props.img} alt={title} />
+                </div>
   
-      <div className='infos-section'>
-         <h5>titre : {title}</h5>
-          <button>  <Link to={`/Books/${props.id}`}>Voir</Link></button>
-     </div>
-  
- 
- </li>
+                <div className='infos-section'>
+                    <p className='cards-text'><strong>TITRE :</strong> {title}</p>
+                    <button className='cards-btn'>  <Link to={`/Books/${props.id}`}>Voir</Link></button>
+                </div>
+            </div>
+     
+    </li>
  
        
             
