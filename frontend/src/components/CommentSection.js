@@ -64,7 +64,7 @@ function CommentSection(props) {
     }  */
     return (
 
-        <>
+        <div className='comments-section'>
           <div className='comment_form'>
               
                 <textarea className = '' value={newcomment}  htmlfor= 'comment' onChange={handleChangeComment}></textarea>
@@ -75,11 +75,13 @@ function CommentSection(props) {
          
           {comments.map((comment, key) => {
             return (
-              <div>
-                
+              <div className=' comment'>
+                  <div className='comment-head'>
                     <i className="fa-solid fa-circle-user fa-2px" ></i>
                     <h3>{comment.name}</h3>
                     <h4>{comment.publisheddate}</h4>
+                  </div>
+                    
                     <p>{comment.description}</p>
                </div>
             
@@ -91,7 +93,7 @@ function CommentSection(props) {
        
 
         
-        </>
+        </div>
       
         
     );

@@ -8,8 +8,7 @@ const Roman = () => {
         <div>
             <Navigation/>
             <h1>Voici les Romans</h1>
-            <p>
-            </p>
+           
         </div>
     )
 }
