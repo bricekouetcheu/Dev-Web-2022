@@ -51,6 +51,10 @@
   },
   "devDependencies": {
     "@types/jest": "^27.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "eslint": "^8.15.0",
+    "eslint-plugin-react": "^7.29.4",
     "jest": "^28.1.0",
     "react-test-renderer": "^18.1.0"
   }
