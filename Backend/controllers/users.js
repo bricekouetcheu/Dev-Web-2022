@@ -102,7 +102,7 @@ exports.Login = (req , res , next)=>{
                             id : user_id,
                             surname: surname}, 
                             'RANDOM_TOKEN_SECRET',
-                            { expiresIn: '48h'})
+                            { expiresIn: '24h'})
 
                         return res.status(200).json(token)
                     }

@@ -4,6 +4,9 @@ import axios from 'axios';
 import DisplayComment from './DisplayComment';
 import '../styles/components/CommentSection.css';
 import {AuthContext} from '../contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
 
 function CommentSection(props) {
 
@@ -13,6 +16,7 @@ function CommentSection(props) {
     const [newcomment,setNewcomment] = useState('');
     const [sendComment , setSendComment] = useState(false);
     const  {bookId} = useParams();
+    const navigate = useNavigate();
 
     useEffect(() => {
      //recuperer tous les commentaires
@@ -68,18 +72,36 @@ function CommentSection(props) {
     }  */
     return (
 
-        <div className='comments-section'>
-          <div className='comments_form'>
-              
-                <textarea className = '' value={newcomment}  htmlfor= 'comment' onChange={handleChangeComment} placeholder="Donnez votre avis..."></textarea>
-                <button onClick={addComment}><b>Ajouter votre comentaire</b> </button>
-           </div>
+
+        
+       <div className='comments-section'>
+         <h2> <strong>Avis :</strong> {comments.length}</h2>
+
+         { isAuthenticated ?
+
+              <div className='comments_form'>
+           
+                    <textarea className = '' value={newcomment}  htmlFor = 'comment' onChange={handleChangeComment} placeholder="Donnez votre avis..."></textarea>
+                    <button onClick={addComment}><b>Ajouter votre comentaire</b> </button>
+              </div>    
+
+              :
+
+              <NavLink to='/Connexion' className='Connexion'>Connectez vous pour ajouter un avis</NavLink>
+
+
+         }
+          
+      
+       
+
+          
 
          <div className='Comments_display'>
          
-          {comments.map((comment, key) => {
+          {comments.map((comment, index) => {
             return (
-              <div className='comment-name'>
+              <div className='comment-name' key={index}>
                   <div className='comment-head'>
                         <i className="fa-solid fa-circle-user fa-2x" ></i>
                         <div className=''>

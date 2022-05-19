@@ -16,11 +16,11 @@ const Navigation = () => {
    
     console.log(isAuthenticated);
 
+const logOut = ()=>{
+    sessionStorage.removeItem("accessToken");
+    setIsAuthenticated(false);
 
-   /* const handleLogout = () => {
-      logout();
-      setIsAuthenticated(false);
-    }*/
+}
   
     
      return(
@@ -37,7 +37,7 @@ const Navigation = () => {
                 {!isAuthenticated ?
                  <NavLink to='/Connexion' className='connexion'><li>Connexion</li></NavLink>
                  :
-                 <NavLink to='/Connexion' className='connexion'><li>Deconnexion</li></NavLink>
+                 <NavLink to='' className='connexion'><li onClick={logOut}>Deconnexion</li></NavLink>
                 
                   
                 }

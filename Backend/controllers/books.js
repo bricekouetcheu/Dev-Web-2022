@@ -1,6 +1,7 @@
 /*const pool = require("../db");*/
 const fetch = require('node-fetch');
 const axios = require('axios');
+require('dotenv').config();
 
 
 
@@ -36,7 +37,7 @@ exports.getBooksbyName = (req, res, next) => {
 exports.getOneSingleBook = (req, res , next)=>{
   const id = req.params.id;
   console.log(id);
-  const APIKey = "AIzaSyChlMTYVc6CQyv9z-FunM5lzwoa7ds_yIw";
+  const APIKey = process.env.API_KEY;
 
   fetch(" https://www.googleapis.com/books/v1/volumes/"+req.params.id )
   .then((response) =>{

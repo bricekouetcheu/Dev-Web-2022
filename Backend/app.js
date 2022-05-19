@@ -8,6 +8,7 @@ const cors = require('cors');
 const CommentsRoutes = require('./routes/comment.js')
 
 
+
 app.use(express.json()); //pour gerer les requetes POST
 
 app.use(bodyParser.urlencoded({
@@ -41,6 +42,7 @@ app.use('/api/books' , CommentsRoutes);
 app.get('/', function (req, res) {
   res.send('mise en place du serveur de developpement')
 })
+
 
 
 module.exports = app;
