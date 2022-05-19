@@ -1,0 +1,14 @@
+body{
+   /* background-image: url("/src/assets/homepage1.jpg");*/
+   background-color: #e5e5e5;
+
+}
+
+.body-section{
+   display: flex;
+   flex-direction: column;
+   position: relative;
+  margin-top: 0px;
+  bottom: 0px;
+   
+}

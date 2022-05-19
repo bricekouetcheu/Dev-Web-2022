@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*toujours l'appliquer sur toutes les pages*/
+
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90px;
+  background-color: #8ec3eb;
+  color: rgb(0, 0, 0);
+  width: 100%;
+}
+
+.logo{
+  font-size: 30px;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: flex-end;
+  list-style: none; /*pour enlever les retour a la ligne*/
+  width: 75%;
+
+}
+
+
+.home,
+.jeunesse,
+.roman,
+.autre,
+.connexion{
+  text-decoration: none;/*pour enlever le sous lignage*/
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+
+}
+
+.home:hover,
+.jeunesse:hover,
+.roman:hover,
+.autre:hover,
+.connexion:hover{
+  color: black;
+  text-decoration: none;
+  transform: scaleX(1.2);
+}
+
+.connexion{
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 12px;
+}
+
+.mobile-menu-icon{
+  display: none;
+
+}
+
+@media screen and (max-width: 780px){
+  .logo{
+    display: flex;
+    position: absolute;
+    top: 15px;
+    left: 35px;
+  }
+
+  .nav-links{
+    display: none;
+    
+  }
+
+  .nav-links-mobile{
+    position: absolute;
+    display: block;
+    list-style: none;
+    background-color: #ADD8E6;
+    left: 0;
+    top: 70px;
+    transition: all 0.5s ease-out;
+    width: 100%;
+  }
+
+ .home,
+.jeunesse,
+.roman,
+.autre,
+.connexion
+{
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 32px;
+  width: 100%;
+  transition: all 0.5s  ease;
+
+}
+
+.connexion{
+  border: none;
+
+}
+
+.mobile-menu-icon{
+  display: block;
+  position: absolute;
+  font-size: 30px;
+  color: black;
+  background-color: #ADD8E6;
+  border: none;
+  outline: none;
+  top: 30px;
+  right: 25px;
+
+}
+
+
+  
+}
+

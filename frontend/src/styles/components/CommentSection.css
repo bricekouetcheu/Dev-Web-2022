@@ -1,0 +1,74 @@
+.comments-section{
+    margin: 65px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.comments_form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.comment-name{
+   margin-top: 30px; 
+}
+
+.comments_form textarea{
+    height: 180px;
+    margin-bottom: 10px;
+    max-width: 350px;
+    padding: 10px;
+}
+
+.comments_form button {
+    
+    margin-bottom: 10px;
+    max-width: 150px;
+    float: right;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #8ec3eb;
+}
+
+.Comments_display{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    
+}
+
+.comment-name{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 300px;
+    background-color: white;
+}
+
+.comment-head{
+    display: flex;
+    flex-direction: row;
+
+    
+  
+}
+
+.comment-head div{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.comment-head h3{
+    margin-top: 0px;
+    margin-right: 5px;
+    color: #8ec3eb;
+}
+
+.Connexion{
+   
+    font-size: 15px;
+}
