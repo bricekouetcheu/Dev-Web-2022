@@ -18,12 +18,9 @@ exports.getCommentsFromOneBook = (req , res, next)=>{
             if(err) {res.status(500).json({
                     err}) }
                 res.status(200).json(results.rows);
-                console.log(bookID );
-                console.log(results.rows);
         })
  
     }   catch (err) {
-        console.log(err);
         res.status(500).json({
         error: "Database error while registring user!", //Database connection error
         });
