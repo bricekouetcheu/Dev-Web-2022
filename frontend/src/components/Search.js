@@ -42,7 +42,7 @@ const Search = (props) => {
                             className='search'
                              type="text" 
                              autoComplete='off' 
-                            placeholder='Quelle livre cherchez-vous ?'
+                            placeholder='Quel livre cherchez-vous ?'
                             id="livre"
                             onChange={handleChange}
                         />
