@@ -1,10 +1,10 @@
 import React from 'react';
 import Navigation from './Navigation';
 import '../styles/components/Register.css'
-import { useState } from 'react';
+import { useState} from 'react';
 import axios from 'axios';
-import { Validator } from 'react';
 import validator from 'validator';
+import {useNavigate} from 'react-router-dom'
 
 function Register(props) {
 
@@ -13,11 +13,9 @@ function Register(props) {
     const [email , setEmail] = useState('');
     const [password , setPassword] = useState('');
     const [confPassword , setconfPassword] = useState('');
-    const API_URL = 'http://localhost:5000/api/users/register';
+    const API_URL = 'https://projetdev2022.herokuapp.com/api/users/register';
+    const navigate = useNavigate();
 
-    
-
-   
 
     const handleNameChange = (e)=>{
         setName(e.target.value);
@@ -65,8 +63,8 @@ function Register(props) {
             
         }
 
-        
-
+        alert('nouvel utilisateur enregistré !!!')
+        navigate('/');
         e.preventDefault();
 
     };
@@ -101,7 +99,7 @@ function Register(props) {
                    
                 </div>
                 <div align='center'>
-                <a> <p className='inscription' onClick={props.Switch}>vous avez deja un compte?</p></a>
+                <a><p className='inscription' onClick={props.Switch}>vous avez deja un compte?</p></a>
                 <input className='submit-btn' value='submit' type='submit'/>< br />
                
                 </div>

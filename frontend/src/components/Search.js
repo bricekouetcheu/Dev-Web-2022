@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import { NavLink ,useNavigate} from 'react-router-dom'
 import '../styles/components/search.css'
 import axios from 'axios';
 import Cards from './Cards';
@@ -12,13 +11,9 @@ const Search = (props) => {
     
     const [book, setBook] = useState("");
     const [result, setResult] = useState([]);
-    const [ApiKey, setApiKey] = useState("AIzaSyD-ApOEYhezmTwgoeQVV5BA7Ow542q_zhM");
-    const navigate = useNavigate();
+    
 
-    const movetoHome=()=>{
-        navigate('/Login');
 
-    }
 
     function handleChange(event){
         const book = event.target.value;
@@ -30,7 +25,7 @@ const Search = (props) => {
         event.preventDefault();
 
 
-        axios.get('http://localhost:5000/api/books/'+book)
+        axios.get('https://projetdev2022.herokuapp.com/api/books/'+book)
         .then(data1 => {
             setResult(data1.data.items);
             console.log(result);

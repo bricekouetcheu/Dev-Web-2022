@@ -10,16 +10,8 @@ const Books = (props) => {
     const  {bookId} = useParams();
     const [result , setResult] = useState([]);
     const [image , setImage] = useState([]);
-    const url = 'http://localhost:5000/api/books/single/ ' +bookId
+    const url = 'https://projetdev2022.herokuapp.com/api/books/single/ ' +bookId
 
-    const DisplayAuthors = (table)=>{ 
-       
-        let resultat = table.toString();
-       
-
-        return resultat;
-
-    }
   
     useEffect(()=>{
   

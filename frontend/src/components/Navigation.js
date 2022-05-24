@@ -1,8 +1,7 @@
 import React, {useContext, useState} from 'react'
 import { NavLink } from 'react-router-dom'
 import {AuthContext} from '../contexts/AuthContext';
-import '../styles/components/navigation.css'
-import { logout } from '../services/AuthApi';
+import '../styles/components/navigation.css';
 
 
 

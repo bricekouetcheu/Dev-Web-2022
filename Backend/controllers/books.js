@@ -20,7 +20,7 @@ exports.getBooksbyName = (req, res, next) => {
       .then((jsonResponse) => {
           res.status(200);
           res.send(jsonResponse);
-       /* console.log(jsonResponse);*/
+      
         
       })
     .catch(err =>{
@@ -36,7 +36,6 @@ exports.getBooksbyName = (req, res, next) => {
 
 exports.getOneSingleBook = (req, res , next)=>{
   const id = req.params.id;
-  console.log(id);
   const APIKey = process.env.API_KEY;
 
   fetch(" https://www.googleapis.com/books/v1/volumes/"+req.params.id )
@@ -48,7 +47,6 @@ exports.getOneSingleBook = (req, res , next)=>{
   .then((jsonResponse) => {
       res.status(200);
       res.send(jsonResponse);
-    console.log(jsonResponse);
     
   })
 .catch(err =>{
