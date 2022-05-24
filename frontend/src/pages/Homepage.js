@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { NavLink } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 

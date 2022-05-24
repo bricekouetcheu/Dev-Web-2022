@@ -1,10 +1,9 @@
-import React, { useState , useContext,  useEffect } from 'react';
+import React, { useState , useContext,} from 'react';
 import { useNavigate } from 'react-router-dom'
 import Navigation from './Navigation';
 import '../styles/components/login.css';
 import axios from 'axios';
 import { Validator } from 'react';
-import validator from 'validator';
 import { AuthContext } from '../contexts/AuthContext';
 
 
@@ -32,10 +31,9 @@ const Login = ({Switch} ) => {
         e.preventDefault();
 
         const data = {email:email , password:password};
-        axios.post('http://localhost:5000/api/users/login' , data)
+        axios.post('https://projetdev2022.herokuapp.com/api/users/login' , data)
         .then((response)=>{
             if(response.data.error){
-                alert(response.data.error);
                 setErrorMessages(response.data.error);
             }else{
                 const token = response.data;

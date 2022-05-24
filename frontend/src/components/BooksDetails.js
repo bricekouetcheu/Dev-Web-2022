@@ -4,17 +4,7 @@ import '../styles/components/bookDetails.css';
 import CommentSection from './CommentSection';
 
 function BooksDetails(props) {
-    //declaration des proprietés
-
-   /* const titre= props.title;*/
-    const img = props.img;
-    const description = props.description;
-    const auteurs = props.authors;
-    const date_de_publication = props.publishedDate;
-   
-
-
-    
+  
     
     return (
        <div>

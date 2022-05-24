@@ -10,10 +10,7 @@ import Autre from './pages/Autre';
 import Notfound from './pages/Notfound';
 import Connexion  from './pages/Connexion';
 import Books from './pages/Books';
-import Profile from './pages/Profile';
-import { hasAuthenticated } from './services/AuthApi.js';
 import { AuthContext } from './contexts/AuthContext';
-import AuthenticatedRoutes from './components/AuthenticatedRoutes';
 import { useEffect } from 'react';
 import axios from 'axios';
 
@@ -24,7 +21,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/users/auth", {
+      .get("https://projetdev2022.herokuapp.com/api/users/auth", {
         headers: {
           accessToken: localStorage.getItem("accessToken"),
         },

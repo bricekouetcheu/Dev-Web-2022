@@ -1,10 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React, { useState , useEffect,useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import DisplayComment from './DisplayComment';
 import '../styles/components/CommentSection.css';
 import {AuthContext} from '../contexts/AuthContext';
-import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
 
@@ -16,12 +15,12 @@ function CommentSection(props) {
     const [newcomment,setNewcomment] = useState('');
     const [sendComment , setSendComment] = useState(false);
     const  {bookId} = useParams();
-    const navigate = useNavigate();
+  
 
     useEffect(() => {
      //recuperer tous les commentaires
-        axios.get("http://localhost:5000/api/books/single/"+bookId+"/comments").
-        then((response) => {
+        axios.get("https://projetdev2022.herokuapp.com/api/books/single/"+bookId+"/comments")
+        .then((response) => {
           const resultat = response.data;
           setComments(resultat);
           console.log(resultat);
@@ -31,7 +30,7 @@ function CommentSection(props) {
 
       useEffect(() => {
         //recuperer tous les commentaires apres l'envoie d'un nouveau commentaires
-           axios.get("http://localhost:5000/api/books/single/"+bookId+"/comments").then((response) => {
+           axios.get("https://projetdev2022.herokuapp.com/api/books/single/"+bookId+"/comments").then((response) => {
              setComments(response.data);
            });
          }, [sendComment]);
@@ -39,7 +38,7 @@ function CommentSection(props) {
 //ajout d'un nouveau commentaire
     const addComment = () => {
         axios
-          .post("http://localhost:5000/api/books/single/"+bookId+"/comment", {
+          .post("https://projetdev2022.herokuapp.com/api/books/single/"+bookId+"/comment", {
            description: newcomment,
           },
           
@@ -47,29 +46,16 @@ function CommentSection(props) {
             headers : {accessToken:localStorage.getItem("accessToken"),},
           })
           .then((response) => {
-           /* const commentToAdd = {  description: newcomment,
-                                       };
-            setComments([...comments, commentToAdd]);*/
             setSendComment(!sendComment);
             setNewcomment("");
           });
       }
    
 
-    //recuperer la valeur des inputs
-    const handleChangeName = (e)=>{
-        setName(e.target.value) ;
-    }
-
     const handleChangeComment = (e)=>{
         setNewcomment(e.target.value);
     }
-//fonction d'envoie du formulaire
-    /*const handleSubmit = (e)=>{
-        e.preventDefault();
-        addComment();
 
-    }  */
     return (
 
 
