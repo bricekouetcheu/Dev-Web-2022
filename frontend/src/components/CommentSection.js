@@ -5,6 +5,7 @@ import axios from 'axios';
 import '../styles/components/CommentSection.css';
 import {AuthContext} from '../contexts/AuthContext';
 import { NavLink } from 'react-router-dom';
+import Stars from './Stars';
 
 
 function CommentSection(props) {
@@ -104,11 +105,9 @@ function CommentSection(props) {
             );
           })}
         </div>
-            
-         
-       
-
-        
+         <div>
+         </div>
+               
         </div>
       
         
